@@ -1,8 +1,5 @@
 # FAU Thesis Template
 A Typst thesis template designed to simplify writing an engineering thesis at the Open-Source Professorship, Department of Engineering, FAU.
-Absolutely! Here’s a polished and more inviting version of your description:  
-
----
 
 ## 🛠️ Setup Guide for FAU Thesis Template  
 
