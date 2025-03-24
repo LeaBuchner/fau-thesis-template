@@ -1,7 +1,8 @@
 #import "lib.typ": thesis
 #import "metadata.typ": *
-#set document(title: "AI based Template Generation for Jayvee", author: "Lea Buchner")
+ #import "@preview/abbr:0.2.3"
 
+#set document(title: "AI based Template Generation for Jayvee", author: "Lea Buchner")
 #show: thesis.with(
     title: titleEnglish,
     titleGerman: titleGerman,
@@ -17,4 +18,5 @@
 )
 
 #include "/content/introduction.typ"
-
+#pagebreak()
+#include "/content/chapter1.typ"

@@ -5,6 +5,8 @@
 #import "/utils/print_page_break.typ": *
 #import "/layout/fonts.typ": *
 #import "@preview/glossarium:0.5.4": make-glossary, register-glossary, print-glossary, gls, glspl
+#import "@preview/acrostiche:0.5.1": *
+ #import "@preview/abbr:0.2.3"
 
 #let thesis(
   titleGerman: "",
@@ -53,7 +55,7 @@
   print_page_break(print: is_print)
 
   set page(
-    margin: (left: 30mm, right: 30mm, top: 40mm, bottom: 40mm),
+    margin: (left: 30mm, right: 30mm, top: 60mm, bottom: 40mm),
     numbering: none,
     number-align: center,
   )
@@ -67,8 +69,8 @@
   show math.equation: set text(weight: 400)
 
   // --- Headings ---
-  show heading: set block(below: 0.85em, above: 1.75em)
-  show heading: set text(font: fonts.body)
+  show heading: set block(below: 2.1em, above: 1.75em)
+  show heading: set text(font: fonts.body,  1.6em, weight: "semibold")
   show: make-glossary
 
   set heading(numbering: "1.1")
@@ -104,8 +106,7 @@
   }
   outline(
     title: {
-    v(20mm)
-      text(font: fonts.body, 1.6em, weight: "semibold", "Contents")
+      text(font: fonts.body, "Contents")
       v(15mm)
     },
     indent: 2em
@@ -118,9 +119,9 @@
 
     outline(
     title: {
-    v(20mm)
-      text(font: fonts.body, 1.6em, weight: "semibold", "List of Figures")
-      v(15mm)
+      text(font: fonts.body, "List of Figures")
+            v(15mm)
+
     }, target: figure.where(kind: image))
 
   pagebreak()
@@ -130,35 +131,29 @@
 
     outline(
     title: {
-    v(20mm)
-      text(font: fonts.body, 1.6em, weight: "semibold", "List of Tables")
-      v(15mm)
+      text(font: fonts.body,  "List of Tables")
+            v(15mm)
+
     }, target: figure.where(kind: table))
 
     pagebreak()
     pagebreak()
-    let entry-list = (
-    (
-      key: "kuleuven",
-      short: "KU Leuven",
-      long: "Katholieke Universiteit Leuven",
-      description: "A university in Belgium.",
-    ),
-    // Add more terms
-  )
-  register-glossary(entry-list)
-  // Your document body
-  print-glossary(
-   entry-list
-  )
+    abbr.list()
+     abbr.make(
+       ("PDE", "Partial Differential Equation"),
+       ("BC", "Boundary Condition"),
+       ("DOF", "Degree of Freedom", "Degrees of Freedom"),
+     )
+pagebreak()
+
 
 
     // Main body. Reset page numbering.
   counter(page).update(1)
+  set page(numbering: "1")
   set par(justify: true, first-line-indent: 2em)
 
   body
-
 
     bibliography("/thesis.bib")
 
