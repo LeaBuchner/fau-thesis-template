@@ -1,8 +1,5 @@
 #import "@preview/acrotastic:0.1.1": *
- #import "@preview/abbr:0.2.3"
-
-
-
+#import "@preview/abbr:0.2.3"
 
 = Blind Text
 #lorem(100)

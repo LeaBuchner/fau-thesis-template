@@ -1,9 +1,7 @@
 # FAU Thesis Template
 A Typst thesis template designed to simplify writing an engineering thesis at the Open-Source Professorship, Department of Engineering, FAU.
-
-## 🛠️ Setup Guide for FAU Thesis Template  
-
-### ✅ Install Typst  
+## Setup
+Install Typst: 
 - **macOS**:  
 ```bash
 brew install typst
@@ -12,10 +10,9 @@ brew install typst
 ```bash
 winget install --id Typst.Typst
 ```  
-
 ---
 
-### 📄 Generate Your Thesis PDF  
+## Generate Your Thesis PDF  
 Navigate to folder 0.1.0, then simply run:  
 ```bash
 typst compile thesis.typ
@@ -29,7 +26,7 @@ this is faster then recompiling each time.
 
 ---
 
-### ✏️ Write Your Thesis  
+## Write Your Thesis  
 Open the file:  
 ```
 /0.1.0/metadata.typ
@@ -50,4 +47,6 @@ you can:
 - Browse through example files to see formatting in action
 
 ---
-### WIP: Acronyms
+## Acronyms and Bibliography
+In the file ```0.1.0/content/chapter1.typ``` you can find example acronym definitions and an example citing.\
+The bibliography definition can be done in ```0.1.0/thesis.bib``` and the entries will be included in the pdf automatically after the first citing.
