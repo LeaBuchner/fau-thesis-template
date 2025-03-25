@@ -77,7 +77,7 @@
   // Reference first-level headings as "chapters"
   show ref: it => {
     let el = it.element
-    if el != none and el.func() == heading and el.level == 1 {
+    if el != none and el.func() == heading and el.level == 2 {
       link(
         el.location(),
         [Chapter #numbering(
@@ -104,6 +104,7 @@
     v(15pt, weak: true)
     strong(it)
   }
+
   outline(
     title: {
       text(font: fonts.body, "Contents")
@@ -128,23 +129,17 @@
 
   pagebreak()
 
-
     outline(
     title: {
       text(font: fonts.body,  "List of Tables")
-            v(15mm)
+      v(15mm)
 
     }, target: figure.where(kind: table))
 
     pagebreak()
     pagebreak()
-    abbr.list()
-     abbr.make(
-       ("PDE", "Partial Differential Equation"),
-       ("BC", "Boundary Condition"),
-       ("DOF", "Degree of Freedom", "Degrees of Freedom"),
-     )
-pagebreak()
+
+
 
 
 
@@ -154,7 +149,11 @@ pagebreak()
   set par(justify: true, first-line-indent: 2em)
 
   body
-
+  pagebreak(to: "odd", weak: false)
     bibliography("/thesis.bib")
+    
+  pagebreak(to: "odd", weak: false)
+  abbr.list(title:"Acronyms")
+
 
 }

@@ -2,7 +2,7 @@
 #import "metadata.typ": *
  #import "@preview/abbr:0.2.3"
 
-#set document(title: "AI based Template Generation for Jayvee", author: "Lea Buchner")
+#set document(title: "", author: "")
 #show: thesis.with(
     title: titleEnglish,
     titleGerman: titleGerman,
