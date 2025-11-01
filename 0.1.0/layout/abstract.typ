@@ -24,4 +24,5 @@
   v(20mm)  // Top margin
       align(left, text(font: fonts.sans, size: 2.3em, weight: "semibold", title.at(lang)))
   v(10mm)
+  body
 }
