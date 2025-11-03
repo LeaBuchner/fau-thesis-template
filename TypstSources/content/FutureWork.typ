@@ -34,14 +34,16 @@ Fine-tuning with annotated CSV datasets, or applying retrieval-augmented generat
 
 === Systemic Stability and Resource Efficiency
 
-Lessons from benchmarking highlight how runtime instability—especially CUDA OOMs and decoding errors—can break batch workflows. Future versions should:
+Lessons from benchmarking highlight how runtime instability—
+especially CUDA OOMs and decoding errors—can break batch workflows. Future versions should:
 
 - Use adapter-based model compression (e.g., quantization, distillation)
 - Implement checkpointing and caching to prevent full re-runs
 - Dynamically route inputs to lightweight or heavyweight models based on content complexity
 - Adopt container-level job isolation to contain GPU failures
 
-These mitigations would stabilize performance across heterogeneous environments, from SLURM-managed clusters to low-power edge deployments.
+These mitigations would stabilize performance across heterogeneous environments,
+from SLURM-managed clusters to low-power edge deployments.
 
 === Benchmark Coverage and Data Diversity
 

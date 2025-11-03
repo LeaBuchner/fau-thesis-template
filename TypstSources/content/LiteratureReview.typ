@@ -212,7 +212,8 @@ their effectiveness sharply declines under the noise and irregularity characteri
 Instruction-following #abbr.pla[LLM] such as DeepSeek Coder, Qwen3-4B,
 and lCodeLlama-7B-Instruct demonstrate promising zero-shot capabilities
 in discerning header rows and tabular semantics, even under structural ambiguity (Deepseek-AI, 2024 @Deepseek-AI2024; QwenLM, 2024 @QwenLM2024; Meta AI, 2024 @Meta2024).
-Locally hosted #abbr.pla[LLM] offer privacy-preserving and cost-effective schema inference workflows that operate entirely offline, an underexplored but increasingly important deployment paradigm (Deepseek-AI, 2024 @Deepseek-AI2024).
+Locally hosted #abbr.pla[LLM] offer privacy-preserving and cost-effective schema inference workflows that operate entirely offline,
+an underexplored but increasingly important deployment paradigm (Deepseek-AI, 2024 @Deepseek-AI2024).
 
 Moreover, while much current research emphasizes cloud-based LLM systems,
  this work evaluates model performance in a local execution context,
