@@ -29,7 +29,7 @@ this is faster then recompiling each time.
 ## Write Your Thesis  
 Open the file:  
 ```
-/0.1.0/metadata.typ
+metadata.typ
 ```
 and fill in your personal details like:  
 - Name  
@@ -40,7 +40,7 @@ and fill in your personal details like:
 
 In the folder:  
 ```
-/0.1.0/content
+/content
 ```
 you can:  
 - Add your thesis chapters and sections  
@@ -48,5 +48,5 @@ you can:
 
 ---
 ## Acronyms and Bibliography
-In the file ```0.1.0/content/chapter1.typ``` you can find example acronym definitions and an example citing.\
-The bibliography definition can be done in ```0.1.0/thesis.bib``` and the entries will be included in the pdf automatically after the first citing.
+In the file ```/content/abstract.typ``` you can find example acronym definitions and an example citing.\
+The bibliography definition can be done in ```/thesis.bib``` and the entries will be included in the pdf automatically after the first citing.
